@@ -1,5 +1,6 @@
 html {
     scroll-behavior: smooth;
+    scroll-padding-top: 60px; 
   }
 
 body {
@@ -8,6 +9,12 @@ body {
     font-family: "Nunito", Helvetica, Arial, sans-serif;
     font-size: 20px;
     color: #393e46;
+    margin: 0;
+}
+
+nav img {
+    float: left;
+    margin-left: 50px;
 }
 
 main a {
@@ -23,6 +30,7 @@ header{
 }
 
 h1{
+    margin-top: 130px;
     font-size: 50px;
     color: #f95959;
 }
@@ -30,6 +38,7 @@ h1{
 h2 {
     color: #f96d00;
     font-size: 40px;
+    padding-top: 50px;
 }
 
 h3 {
@@ -39,17 +48,25 @@ h3 {
 
 nav {
     width: 100%;
+    background-color: #eae8e8fd;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+nav li {
+    border-right: solid black 1px;
 }
 
 nav ul {
     margin-left: 0px;
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
     list-style-type: none;
     background-color: #eae8e8fd;
     padding-top: 15px;
     padding-bottom: 15px;
+    justify-content: center;
 }
 
 nav ul li a {
@@ -63,6 +80,7 @@ nav ul li a:hover{
 }
 
 .sticky {
+    margin: 0;
     position: fixed;
     top: 0px;
     width: 100%
@@ -73,8 +91,8 @@ nav ul li a:hover{
 }
 
 section {
-    padding: 15px 0px 50px 20px;
     width: 90%;
+    padding: 70px 0px 30px 40px;
 }
 
 .sectionTitle {
@@ -120,6 +138,7 @@ section {
 }
 
 footer {
+    margin-top: 30px;
     background-color: #eae8e8b5;
     text-align: center;
     padding: 15px 0px 10px 0px;

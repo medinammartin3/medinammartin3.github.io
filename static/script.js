@@ -1,3 +1,4 @@
+// Smooth scroll animation
 window.onscroll = function() {myFunction()};
 
 var header = document.getElementById("nav");
@@ -10,4 +11,9 @@ function myFunction() {
   } else {
     header.classList.remove("sticky");
   }
+}
+
+// Keep background color on active link
+function active() {
+
 }
