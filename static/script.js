@@ -1,11 +1,11 @@
-// Smooth scroll animation
-window.onscroll = function() {myFunction()};
+// Sticky nav bar
+window.onscroll = function() {stick()};
 
 var header = document.getElementById("nav");
 
 var sticky = header.offsetTop;
 
-function myFunction() {
+function stick() {
   if (window.pageYOffset > sticky) {
     header.classList.add("sticky");
   } else {
@@ -13,7 +13,4 @@ function myFunction() {
   }
 }
 
-// Keep background color on active link
-function active() {
-
-}
+//TODO : Progress bar animation runs when section is in screen (and not before)
