@@ -14,7 +14,7 @@ body {
 
 nav img {
     float: left;
-    margin-left: 50px;
+    margin-right: 25px;
 }
 
 main a {
@@ -26,11 +26,11 @@ main li {
 }
 
 header{
+    padding-top: 130px;
     text-align: center;
 }
 
 h1{
-    margin-top: 130px;
     font-size: 50px;
     color: #f95959;
 }
@@ -52,6 +52,7 @@ nav {
     display: flex;
     flex-direction: row;
     justify-content: center;
+    align-items: center;
 }
 
 nav li {
@@ -60,6 +61,7 @@ nav li {
 
 nav ul {
     margin-left: 0px;
+    padding-left: 15px;
     display: flex;
     flex-direction: row;
     list-style-type: none;
@@ -76,14 +78,14 @@ nav ul li a {
 }
 
 nav ul li a:hover{
-    background-color: #c7c7c7d8;
+    background-color: rgba(189, 189, 189, 0.847);
 }
 
 .sticky {
     margin: 0;
     position: fixed;
     top: 0px;
-    width: 100%
+    width: 100%;
 }
 
 label {
@@ -195,4 +197,8 @@ footer {
     100% {
       background-color: #47a9ef;
     }
+  }
+
+  .backgroundChange{
+    background-color: #d7d7d7fd;
   }
