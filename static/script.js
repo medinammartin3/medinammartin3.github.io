@@ -36,7 +36,7 @@ var experienceTop = experience.offsetTop;
 var experienceBottom = experienceTop + experience.offsetHeight;
 
 // Programming
-var programming = document.getElementById("programming")
+var programming = document.getElementById("programming");
 var programmingNav = document.getElementById("programmingNav");
 var programmingTop = programming.offsetTop;
 var programmingBottom = programmingTop + programming.offsetHeight;
@@ -78,6 +78,8 @@ function changeNavBackground() {
   // Programming
   if ((window.scrollY > programmingTop - 170) && (window.scrollY < programmingBottom - 170)) {
     programmingNav.classList.add("backgroundChange");
+    // Activate animations
+    $(".progressbar").addClass('progressBarsAnimation'); 
   } else {
     programmingNav.classList.remove("backgroundChange");
   }
@@ -98,3 +100,4 @@ function changeNavBackground() {
 }
 
 //TODO : Progress bar animation runs when section is in screen (and not before)
+// TODO : JQuery

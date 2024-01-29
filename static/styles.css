@@ -186,19 +186,24 @@ footer {
 
 .progressbar {
     background : linear-gradient(#4ed3fb, #47a9ef);
-    animation: progressAnimation 3s;
-  }
-  
-  @keyframes progressAnimation {
-    0% {
-      width: 0%;
-      background-color: #bce5f9;
-    }
-    100% {
-      background-color: #47a9ef;
-    }
   }
 
-  .backgroundChange{
-    background-color: #d7d7d7fd;
-  }
+@media (prefers-reduced-motion: no-preference) {
+    .progressBarsAnimation{
+        animation: progressAnimation 3s;
+    }
+
+    @keyframes progressAnimation {
+        0% {
+            width: 0%;
+            background-color: #bce5f9;
+        }
+        100% {
+            background-color: #47a9ef;
+        }
+    }
+}
+
+.backgroundChange{
+background-color: #d7d7d7fd;
+}
