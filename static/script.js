@@ -101,3 +101,4 @@ function changeNavBackground() {
 
 //TODO : Progress bar animation runs when section is in screen (and not before)
 // TODO : JQuery
+// TODO : Background nav change in big screens

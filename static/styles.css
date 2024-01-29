@@ -184,12 +184,9 @@ footer {
     transition-property: width, background-color;
 }
 
-.progressbar {
-    background : linear-gradient(#4ed3fb, #47a9ef);
-  }
-
 @media (prefers-reduced-motion: no-preference) {
     .progressBarsAnimation{
+        background : linear-gradient(#4ed3fb, #47a9ef);
         animation: progressAnimation 3s;
     }
 
