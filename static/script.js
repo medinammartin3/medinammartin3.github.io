@@ -99,6 +99,21 @@ function changeNavBackground() {
   }
 }
 
-//TODO : Progress bar animation runs when section is in screen (and not before)
+
+// Nav nar small screens deploy 
+var click = 0;
+function showNav(){
+  if (click == 0){
+    $("nav li").addClass("showNav");
+    $(".menuLogo").text("Close");
+    click = 1;
+  } else{
+    $("nav li").removeClass("showNav");
+    $(".menuLogo").text("Menu");
+    click = 0;
+  }
+}
+
+
 // TODO : JQuery
 // TODO : Background nav change in big screens

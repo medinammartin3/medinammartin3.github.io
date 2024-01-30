@@ -13,7 +13,6 @@ body {
 }
 
 nav img {
-    float: left;
     margin-right: 25px;
 }
 
@@ -75,6 +74,10 @@ nav ul li a {
     padding: 15px 60px;
     color: #007cb9;
     text-decoration: none;
+}
+
+.menuLogo{
+    display: none !important;
 }
 
 nav ul li a:hover{
@@ -203,4 +206,77 @@ footer {
 
 .backgroundChange{
 background-color: #d7d7d7fd;
+}
+
+@media only screen and (max-width: 1360px){
+
+    nav {
+        width: 100%;
+        background-color: #eae8e8fd;
+        display: flex;
+        flex-direction: row;
+        justify-content: start;
+        align-items: center;
+    }
+
+    nav img {
+        margin-left: 30%;
+    }
+
+    nav + a {
+        position: absolute;
+        left: 5%;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 20px;
+        align-items: center;
+        z-index: 2;
+        min-height: 23px;
+    }
+
+    nav li {
+        border: none;
+        display: none;
+    }
+
+    .showNav {
+        display: block;
+        animation: navAnimation .8s;
+    }
+
+    @keyframes navAnimation {
+        from {
+            margin-top: -20%;
+            opacity: 0;
+        }
+
+        to {
+            margin-top: 0%;
+            opacity: 1;
+        }
+    }
+
+    nav ul li a {
+        padding: 10px;
+    }
+    
+    .menuLogo{
+        position: absolute;
+        right: 5%;
+        display: block !important;
+        float: right;
+        z-index: 2;
+        cursor: pointer;
+    }
+
+    #allProjects{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .project{
+        width: 60%;
+    }
 }
