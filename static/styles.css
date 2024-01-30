@@ -234,6 +234,8 @@ background-color: #d7d7d7fd;
         align-items: center;
         z-index: 2;
         min-height: 23px;
+        margin-left: auto;
+        margin-right: auto;
     }
 
     nav li {
