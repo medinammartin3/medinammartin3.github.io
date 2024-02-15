@@ -31,7 +31,14 @@ header{
 
 h1{
     font-size: 50px;
+}
+
+#title{
     color: #f95959;
+}
+
+#title:hover{
+    color: #ff807e;
 }
 
 h2 {
