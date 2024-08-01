@@ -194,6 +194,22 @@ footer {
     transition-property: width, background-color;
 }
 
+#contact ul li {
+    margin-bottom: 20px;
+}
+
+#references{
+   margin-top: 70px;
+}
+
+#references > ul > li {
+    font-weight: bold;
+}
+
+#references ul ul {
+    margin-bottom: 40px;
+}
+
 @media (prefers-reduced-motion: no-preference) {
     .progressBarsAnimation{
         background : linear-gradient(#4ed3fb, #47a9ef);
