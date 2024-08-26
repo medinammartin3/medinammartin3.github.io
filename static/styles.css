@@ -31,14 +31,10 @@ header{
 
 h1{
     font-size: 50px;
-}
-
-#title{
     color: #f95959;
-}
-
-#title:hover{
-    color: #ff807e;
+    text-decoration: underline;
+    text-decoration-thickness: 4px;
+    text-underline-offset: 5px;
 }
 
 h2 {
