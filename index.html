@@ -7,11 +7,10 @@
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-268HQVCTF7"></script>
     <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-
-    gtag('config', 'G-268HQVCTF7');
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-268HQVCTF7');
     </script>
     <script type="text/javascript" src="https://code.jquery.com/jquery-3.6.1.js"></script>
     <link rel="icon" href="static/images/favicon.ico" type="image/x-icon"/>
@@ -25,17 +24,35 @@
         </a>
         <ul>
             <li><a id="aboutNav" href="#about">About</a></li>
-            <li><a id="educationNav" href="#education">Education</a></li>
-            <li><a id="experienceNav" href="#experience">Experience</a></li>
-            <li><a id="programmingNav" href="#programming">Programming</a></li>
             <li><a id="projectsNav" href="#projects">Projects</a></li>
-            <li style="border: none;"><a id="contactNav" href="#contact">Contact</a></li>
+            <li><a id="educationNav" href="#education">Education</a></li>
+            <li style="border: none;"><a id="experienceNav" href="#experience">Experience</a></li>
         </ul>
         <span onclick="showNav()" class="menuLogo  material-symbols-outlined">Menu</span>
     </nav>
     <header id="header">
         <h1>Martin Medina</h1>
         <h2 style="color: rgb(111, 111, 111); padding: 0;">Computer Science 3rd year student</h2>
+        <ul id="social">
+            <li>
+                <a href="mailto:medinammartin3@gmail.com" target="_blank">
+                    <img class="icon" src="static/images/email-icon.svg" alt="email-icon">
+                    E-mail
+                </a>
+            </li>
+            <li>
+                <a href="https://github.com/medinammartin3" target="_blank">
+                    <img class="icon" src="static/images/github-icon.svg" alt="github-icon">
+                    Github
+                </a>
+            </li>
+            <li>
+                <a href="https://www.linkedin.com/in/medinammartin3/" target="_blank">
+                    <img class="icon" src="static/images/linkedin-icon.svg" alt="linkedin-icon">
+                    LinkedIn
+                </a>
+            </li>
+        </ul>
     </header>
     <main>
         <!-- About Me -->
@@ -45,33 +62,195 @@
                 <h2>About Me</h2>
             </div>
             <p>
-                I'm a enthusiastic 3rd year Computer Science international student
-                at the Université de Montréal, with a passion for learning,
-                innovation, programming and collaborative work. I am a responsible,
-                organized and autonomous person who is used to completing high-quality
-                work within strict deadlines.
+                I am an enthusiastic 3rd-year Computer Science international 
+                student at the Université de Montréal, currently working as a 
+                teaching assistant. I am deeply passionate about Machine Learning, 
+                Neural Networks, Large Language Models, random number generators, 
+                simulation, and optimization.  I bring a track record of effectively 
+                assisting over 300 students across various programming and web 
+                development courses. My dedication to education, programming and 
+                innovation is reflected in my achievements, which include leading 
+                workshops and a large number of projects that have received positive 
+                feedback. I am known for my responsibility, organization and 
+                high-quality work within strict deadlines.
             </p>
-            <h3>Skills</h3>
-            <ul>
-                <li>Oral and written communication</li>
-                <li>Teamwork skills</li>
-                <li>Responsible, autonomous and organized</li>
-                <li>Ability to adapt and learn quickly</li>
-                <li>Respect for deadlines</li>
-                <li>Strategic analytical mind</li>
-            </ul>
             <div class="sectionTitle">
                 <img src="static/images/language-svgrepo-com.svg" alt="Person" width="50px" style="padding-right: 10px;">
-                <h3>Languages (oral and written)</h3>
+                <h3>Languages</h3>
             </div>
             <ul>
-                <li>Spanish - 100% (First language)</li>
-                <li>French - 100%</li>
-                <li>English - 80%</li>
-                <li>Portuguese - 60%</li>
+                <li><span class="lang">French</span> - Bilingual proficiency (C2)</li>
+                <li><span class="lang">English</span> - Full professional proficiency (C1)</li>
+                <li><span class="lang">Spanish</span> - Native (C2)</li>
+                <li><span class="lang">Portuguese</span> - Limited working proficiency (B2)</li>
             </ul>
         </section>
+                <!-- TODO: Improve section -->
+                <!-- Projects -->
+                <section id="projects">
+                    <div class="sectionTitle" style="margin-left: 25px;">
+                        <img src="static/images/hammer-svgrepo-com.svg" alt="Hammer" width="100px">
+                        <h2>Projects</h2>
+                    </div>
+                    <div id="allProjects">
+                        <!-- Sondi -->
+                        <div class="project">
+                            <h3>Sondi</h3>
+                            <ul>
+                                <li>
+                                    Web-based online polls application implemented with Django that 
+                                    lets you create surveys, vote on existing surveys, view survey 
+                                    results and share your surveys.
+                                </li>
+                                <li>Programming languages :</li>
+                                <ul>
+                                    <li>Python (Django)</li>
+                                    <li>HTML</li>
+                                    <li>CSS</li>
+                                    <li>JavaScript</li>
+                                </ul>
+                                <li>Type : Personal project</li>
+                                <li><a href="https://github.com/medinammartin3/Sondi">GitHub Repository</a></li>
+                            </ul> 
+                        </div>
+        
+                        <!-- Inscriptions UdeM -->
+                        <div class="project">
+                            <h3>Java client-server application</h3>
+                            <ul>
+                                <li>
+                                    Java client-server application that allows users 
+                                    (students) to register to their courses with a graphical
+                                     interface implemented with JavaFX and a CSV database.
+                                </li>
+                                <li>Programming languages :</li>
+                                <ul>
+                                    <li>Java (Maven, JavaFX)</li>
+                                </ul>
+                                <li>Type : IFT1025 (Object-Oriented programming) project</li>
+                                <li><a href="https://youtu.be/T4D-IG02jn4?si=J_YH_SwyAQD9eIqJ">Demonstration video</a></li>
+                                <li><a href="https://github.com/medinammartin3/Inscriptions_UdeM">GitHub Repository</a></li>
+                            </ul> 
+                        </div>
+        
+                        <!-- OnlineShop -->
+                        <div class="project">
+                            <h3>E-commerce website</h3>
+                            <ul>
+                                <li>
+                                    Front-end implementation of an interactive e-commerce website 
+                                    using HTML, CSS, JavaScript, JQuery and AJAX.
+                                </li>
+                                <li>Programming languages :</li>
+                                <ul>
+                                    <li>JavaScript (JQuery, AJAX)</li>
+                                    <li>HTML</li>
+                                    <li>CSS</li>
+                                </ul>
+                                <li>Type : IFT1005 (Web Design and Development) project</li>
+                                <li><a href="https://medinammartin3.github.io/TP3_IFT1005" target="_blank">Link to the website</a></li>
+                                <li><a href="https://github.com/medinammartin3/TP3_IFT1005">GitHub Repository</a></li>
+                            </ul> 
+                        </div>
+        
+                        <!-- Slip -->
+                        <div class="project">
+                            <h3>Functional language interpreter</h3>
+                            <ul>
+                                <li>
+                                    Implementation of part of a functional programming language 
+                                    interpreter (similar to Lisp) named Slip.
+                                </li>
+                                <li>Programming languages :</li>
+                                <ul>
+                                    <li>Haskell</li>
+                                </ul>
+                                <li>Type : IFT2035 (Programming language concepts) project</li>
+                                <li><a href="https://github.com/medinammartin3/TP2_IFT2035">GitHub Repository</a></li>
+                            </ul>
+                        </div>
+        
+                        <!-- Hidden Words -->
+                        <div class="project">
+                            <h3>Hidden words game solver</h3>
+                            <ul>
+                                <li>
+                                    Object-oriented program for solving a hidden word grid. 
+                                    Given a list of distinct lowercase words and a grid, the 
+                                    program finds all possible words, from the list provided, that
+                                    can be formed by traversing adjacent characters on the grid.
+                                </li>
+                                <li>Programming languages :</li>
+                                <ul>
+                                    <li>Java</li>
+                                </ul>
+                                <li>Type : IFT2015 (Data Structures) project</li>
+                                <li><a href="https://github.com/medinammartin3/Devoir1_IFT2015">GitHub Repository</a></li>
+                            </ul>
+                        </div>
+                        
+                        <!-- NLP -->
+                        <div class="project">
+                            <h3>Natural language processing program</h3>
+                            <ul>
+                                <li>
+                                    Implementation of two types of Map to create a natural 
+                                    language processing program that finds the most relevant 
+                                    document for a given user query (TFIDF).The program supports
+                                    spelling errors (Levenshtein distance) and suggests the next
+                                    most likely word that appears after a word given by the user.
+                                </li>
+                                <li>Programming languages :</li>
+                                <ul>
+                                    <li>Java (StanfordNLP)</li>
+                                </ul>
+                                <li>Type : IFT2015 (Data Structures) project</li>
+                                <li><a href="https://github.com/medinammartin3/TP2_IFT2015">GitHub Repository</a></li>
+                            </ul>
+                        </div>
+        
+                        <!-- UniShop -->
+                        <div class="project">
+                            <h3>Java-based online store simulation</h3>
+                            <ul>
+                                <li>
+                                    Java-based online store simulation program with command-line
+                                    interface. Implements a database with CSV files for important
+                                    data. Contains numerous features divided into menus for buyers,
+                                    sellers and guests, all of whom can create accounts that operate
+                                    independently and retain each user's data, orders, followers,
+                                    likes, metrics and more.
+                                </li>
+                                <li>Programming languages :</li>
+                                <ul>
+                                    <li>Java (JUnit, Maven)</li>
+                                </ul>
+                                <li>Type : IFT2255 (Software Engineering) project</li>
+                                <li><a href="https://github.com/medinammartin3/Projet_IFT2255">GitHub Repository</a></li>
+                            </ul>
+                        </div>
+        
+                        <!-- Personal Website -->
+                        <div class="project">
+                            <h3>Personal Website</h3>
+                            <ul>
+                                <li>
+                                    This website is one of my most recent projects.
+                                    I also implemented a responsive design for this website.
+                                </li>
+                                <li><a href="https://github.com/medinammartin3/medinammartin3.github.io">GitHub Repository</a></li>
+                                <li>Programming languages :</li>
+                                <ul>
+                                    <li>HTML</li>
+                                    <li>CSS</li>
+                                </ul>
+                                <li>Type : Personal project</li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
 
+        <!-- TODO: Improve section -->
         <!-- Education -->
         <section id="education">
             <!-- UdeM -->
@@ -81,33 +260,29 @@
             </div>
             <h3>Université de Montréal</h3>
             <h4>B.Sc. in Computer Science | September 2022 - April 2025 (expected)</h4>
-            <p>Current GPA: 3.29 (B)</p>
+            <h4 class="awards">Awards:</h4>
+            <ul>
+                <li>Exemption Scholarship for international students</li>
+                <li class="no-decorator">
+                    Biggest merit-based scholarship for international students 
+                    at the Université de Montréal
+                </li>
+            </ul>
 
             <!-- LfBogota -->
-            <h3>Lycée français Louis Pasteur</h3>
+            <h3 style="margin-top: 50px;">Lycée français Louis Pasteur</h3>
             <h4>French Baccalauréat & colombian High School Diploma | July 2022</h4>
-            <p>GPA: 16.71/20 (Mention très bien)</p>
-
-            <!-- Awards -->
-            <h3>Awards</h3>
+            <h4 class="awards">Awards:</h4>
             <ul>
-                <li>Exemption Scholarship for international student</li>
-                <ul>
-                    <li>
-                        Biggest merit-based scholarship for international
-                        students at the Université de Montréal
-                    </li>
-                </ul>
                 <li>Award for academic excellence</li>
-                <ul>
-                    <li>
-                        Given to the top-performing students in recognition of 
-                        their outstanding achievements during a the academic year.
-                    </li>
-                </ul>
+                <li class="no-decorator">
+                    Given to the top-performing students in recognition of 
+                    their outstanding achievements during a the academic year.
+                </li>
             </ul>
         </section>
 
+        <!-- TODO: Improve section + Link to proff. webpage -->
         <!-- Work experience -->
         <section id="experience">
             <div class="sectionTitle">
@@ -115,26 +290,42 @@
                 <h2>Work experience</h2>
             </div>
 
-            <!-- Teacher assistant -->
-            <h3>Teacher assistant</h3>
+            <!-- Teaching assistant -->
+            <h3>Teaching assistant</h3>
             <h4>Université de Montréal</h4>
             <h5>Courses</h5>
             <ul>
                 <li>IFT 1005 - Web Design and Development</li>
-                <ul>
-                    <li>September 2023 - December 2023</li>
-                    <li>Teacher: Abdelhakim Senhaji Hafid</li>
-                </ul>
+                <li class="no-decorator">
+                    <ul>
+                        <li>2 semesters</li>
+                        <li>Professor: Abdelhakim Senhaji Hafid</li>
+                    </ul>
+                </li>
+                
                 <li>IFT 1144 - Introduction to Internet Programming</li>
-                <ul>
-                    <li>September 2023 - April 2024</li>
-                    <li>Professor: Souhila Benbetka</li>
-                </ul>
-                <li>IFT 1990 - Computer Science for Social Sciences</li>
-                <ul>
-                    <li>January 2024 - April 2024</li>
-                    <li>Professor: Souhila Benbetka</li>
-                </ul>
+                <li class="no-decorator">
+                    <ul>
+                        <li>3 semesters</li>
+                        <li>Professor: Souhila Benbetka</li>
+                    </ul>
+                </li>
+
+                <li>IFT 1945 - Internet and websites creation</li>
+                <li class="no-decorator">
+                    <ul>
+                        <li>1 semester</li>
+                        <li>Professor: Souhila Benbetka</li>
+                    </ul>
+                </li>
+                
+                <li>IFT 1990 - Computer Science for Social Sciences
+                <li class="no-decorator">
+                    <ul>
+                        <li>1 semester</li>
+                        <li>Professor: Souhila Benbetka</li>
+                    </ul>
+                </li>
             </ul>
             <h5>Tasks</h5>
             <ul>
@@ -144,7 +335,7 @@
                 <li>Complement the professors explanations with use cases.</li>
             </ul>
 
-            <!-- Animateur -->
+            <!-- Counselor -->
             <h3>Summer school counselor</h3>
             <h4>Université de Montréal</h4>
             <ul>
@@ -199,271 +390,6 @@
                 <li>Inventory Management</li>
                 <li>Quality Control</li>
                 <li>Promoting a Positive Work Environment</li>
-            </ul>
-        </section>
-
-        <!-- Programming skills -->
-        <section id="programming">
-            <div class="sectionTitle">
-                <img src="static/images/programming-svgrepo-com (2).svg" alt="Command line" width="100px">
-                <h2>Programming skills</h2>
-            </div>
-            <ul id="languages">
-                <li>
-                    <p>HTML & CSS</p>
-                    <div class="progress">
-                        <div class="progressbar" style="width: 100%"></div>
-                    </div>
-                    <span>100%</span>
-                </li>
-                <li>
-                    <p>Python</p>
-                    <div class="progress">
-                        <div class="progressbar" style="width: 90%"></div>
-                    </div>
-                    <span>90%</span>
-                </li>
-                <ul>
-                    <li>Django</li>
-                    <li>Numpy</li>
-                </ul>
-                <li>
-                    <p>Java</p>
-                    <div class="progress">
-                        <div class="progressbar" style="width: 90%"></div>
-                    </div>
-                    <span>90%</span>
-                </li>
-                <ul>
-                    <li>JUnit</li>
-                    <li>Maven</li>
-                    <li>JavaFX</li>
-                    <li>Jakarta Persistence API</li>
-                </ul>
-                <li>
-                    <p>JavaScript</p>
-                    <div class="progress">
-                        <div class="progressbar" style="width: 80%"></div>
-                    </div>
-                    <span>80%</span>
-                </li>
-                <ul>
-                    <li>JQuery</li>
-                    <li>Node.js</li>
-                    <li>AJAX</li>
-                </ul>
-                <li>
-                    <p>SQL</p>
-                    <div class="progress">
-                        <div class="progressbar" style="width: 80%"></div>
-                    </div>
-                    <span>80%</span>
-                </li>
-                <ul>
-                    <li>PostgreSQL</li>
-                </ul>
-                <li>
-                    <p>C/C++</p>
-                    <div class="progress">
-                        <div class="progressbar" style="width: 60%"></div>
-                    </div>
-                    <span>60%</span>
-                </li>
-                <li>
-                    <p>Haskell</p>
-                    <div class="progress">
-                        <div class="progressbar" style="width: 60%"></div>
-                    </div>
-                    <span>60%</span>
-                </li>
-            </ul>
-
-            <h3>Others</h3>
-            <ul>
-                <li>Git</li>
-                <li>GitHub</li>
-                <li>UML</li>
-                <li>Bash</li>
-                <li>Data Structures</li>
-                <li>Algorithms</li>
-                <li>Databases</li>
-            </ul>
-        </section>
-
-        <!-- Projects -->
-        <section id="projects">
-            <div class="sectionTitle" style="margin-left: 25px;">
-                <img src="static/images/hammer-svgrepo-com.svg" alt="Hammer" width="100px">
-                <h2>Projects</h2>
-            </div>
-            <div id="allProjects">
-                <!-- Sondi -->
-                <div class="project">
-                    <h3>Sondi</h3>
-                    <ul>
-                        <li>
-                            Web-based online polls application implemented with Django that 
-                            lets you create surveys, vote on existing surveys, view survey 
-                            results and share your surveys.
-                        </li>
-                        <li>Programming languages :</li>
-                        <ul>
-                            <li>Python (Django)</li>
-                            <li>HTML</li>
-                            <li>CSS</li>
-                            <li>JavaScript</li>
-                        </ul>
-                        <li>Type : Personal project</li>
-                        <li><a href="https://github.com/medinammartin3/Sondi">GitHub Repository</a></li>
-                    </ul> 
-                </div>
-
-                <!-- Inscriptions UdeM -->
-                <div class="project">
-                    <h3>Java client-server application</h3>
-                    <ul>
-                        <li>
-                            Java client-server application that allows users 
-                            (students) to register to their courses with a graphical
-                             interface implemented with JavaFX and a CSV database.
-                        </li>
-                        <li>Programming languages :</li>
-                        <ul>
-                            <li>Java (Maven, JavaFX)</li>
-                        </ul>
-                        <li>Type : IFT1025 (Object-Oriented programming) project</li>
-                        <li><a href="https://youtu.be/T4D-IG02jn4?si=J_YH_SwyAQD9eIqJ">Demonstration video</a></li>
-                        <li><a href="https://github.com/medinammartin3/Inscriptions_UdeM">GitHub Repository</a></li>
-                    </ul> 
-                </div>
-
-                <!-- OnlineShop -->
-                <div class="project">
-                    <h3>E-commerce website</h3>
-                    <ul>
-                        <li>
-                            Front-end implementation of an interactive e-commerce website 
-                            using HTML, CSS, JavaScript, JQuery and AJAX.
-                        </li>
-                        <li>Programming languages :</li>
-                        <ul>
-                            <li>JavaScript (JQuery, AJAX)</li>
-                            <li>HTML</li>
-                            <li>CSS</li>
-                        </ul>
-                        <li>Type : IFT1005 (Web Design and Development) project</li>
-                        <li><a href="https://medinammartin3.github.io/TP3_IFT1005" target="_blank">Link to the website</a></li>
-                        <li><a href="https://github.com/medinammartin3/TP3_IFT1005">GitHub Repository</a></li>
-                    </ul> 
-                </div>
-
-                <!-- Slip -->
-                <div class="project">
-                    <h3>Functional language interpreter</h3>
-                    <ul>
-                        <li>
-                            Implementation of part of a functional programming language 
-                            interpreter (similar to Lisp) named Slip.
-                        </li>
-                        <li>Programming languages :</li>
-                        <ul>
-                            <li>Haskell</li>
-                        </ul>
-                        <li>Type : IFT2035 (Programming language concepts) project</li>
-                        <li><a href="https://github.com/medinammartin3/TP2_IFT2035">GitHub Repository</a></li>
-                    </ul>
-                </div>
-
-                <!-- Hidden Words -->
-                <div class="project">
-                    <h3>Hidden words game solver</h3>
-                    <ul>
-                        <li>
-                            Object-oriented program for solving a hidden word grid. 
-                            Given a list of distinct lowercase words and a grid, the 
-                            program finds all possible words, from the list provided, that
-                            can be formed by traversing adjacent characters on the grid.
-                        </li>
-                        <li>Programming languages :</li>
-                        <ul>
-                            <li>Java</li>
-                        </ul>
-                        <li>Type : IFT2015 (Data Structures) project</li>
-                        <li><a href="https://github.com/medinammartin3/Devoir1_IFT2015">GitHub Repository</a></li>
-                    </ul>
-                </div>
-                
-                <!-- NLP -->
-                <div class="project">
-                    <h3>Natural language processing program</h3>
-                    <ul>
-                        <li>
-                            Implementation of two types of Map to create a natural 
-                            language processing program that finds the most relevant 
-                            document for a given user query (TFIDF).The program supports
-                            spelling errors (Levenshtein distance) and suggests the next
-                            most likely word that appears after a word given by the user.
-                        </li>
-                        <li>Programming languages :</li>
-                        <ul>
-                            <li>Java (StanfordNLP)</li>
-                        </ul>
-                        <li>Type : IFT2015 (Data Structures) project</li>
-                        <li><a href="https://github.com/medinammartin3/TP2_IFT2015">GitHub Repository</a></li>
-                    </ul>
-                </div>
-
-                <!-- UniShop -->
-                <div class="project">
-                    <h3>Java-based online store simulation</h3>
-                    <ul>
-                        <li>
-                            Java-based online store simulation program with command-line
-                            interface. Implements a database with CSV files for important
-                            data. Contains numerous features divided into menus for buyers,
-                            sellers and guests, all of whom can create accounts that operate
-                            independently and retain each user's data, orders, followers,
-                            likes, metrics and more.
-                        </li>
-                        <li>Programming languages :</li>
-                        <ul>
-                            <li>Java (JUnit, Maven)</li>
-                        </ul>
-                        <li>Type : IFT2255 (Software Engineering) project</li>
-                        <li><a href="https://github.com/medinammartin3/Projet_IFT2255">GitHub Repository</a></li>
-                    </ul>
-                </div>
-
-                <!-- Personal Website -->
-                <div class="project">
-                    <h3>Personal Website</h3>
-                    <ul>
-                        <li>
-                            This website is one of my most recent projects.
-                            I also implemented a responsive design for this website.
-                        </li>
-                        <li><a href="https://github.com/medinammartin3/medinammartin3.github.io">GitHub Repository</a></li>
-                        <li>Programming languages :</li>
-                        <ul>
-                            <li>HTML</li>
-                            <li>CSS</li>
-                        </ul>
-                        <li>Type : Personal project</li>
-                    </ul>
-                </div>
-            </div>
-        </section>
-
-        <!-- Contact -->
-        <section id="contact">
-            <div class="sectionTitle">
-                <img src="static/images/contact-book-svgrepo-com.svg" alt="Contact book" width="100px">
-                <h2>Contact</h2>
-            </div>
-            <ul>
-                <li><a href="mailto:medinammartin3@gmail.com">medinammartin3@gmail.com</a></li>
-                <li><a href="https://github.com/medinammartin3">github.com/medinammartin3</a></li>
-                <li><a href="https://www.linkedin.com/in/medinammartin3/">linkedin.com/in/medinammartin3</a></li>
             </ul>
         </section>
     </main>
