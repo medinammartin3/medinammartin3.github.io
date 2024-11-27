@@ -203,10 +203,13 @@ section {
 footer {
     margin-top: 30px;
     background-color: #eae8e8b5;
-    text-align: center;
     padding: 15px 0px 10px 0px;
     width: 100%;
     font-size: 18px;
+}
+
+footer p{
+    text-align: center;
 }
 
 .progress {
