@@ -34,7 +34,7 @@ header{
     text-align: center;
 }
 
-h1{
+h1 a{
     font-size: 50px;
     color: #f95959;
     text-decoration: underline;
@@ -42,7 +42,11 @@ h1{
     text-underline-offset: 5px;
 }
 
-#social{
+h1 a:hover{
+    color: #ff8383;
+}
+
+.social{
     padding: 0 15px;
     display: flex;
     flex-direction: row;
@@ -52,21 +56,21 @@ h1{
     justify-content: center;
 }
 
-#social li{
+.social li{
     border: #727272 solid 2px;
-    margin: 0 45px;
+    margin: 0 15px;
     padding: 10px 15px;
     border-radius: 15px;
     width: 130px;
     background-color: #f4f4f4;
 }
 
-#social li:hover{
+.social li:hover{
     box-shadow: 0 0 10px #5d5b7eb5;
     cursor: pointer;
 }
 
-#social a{
+.social a{
     text-decoration: none;
     color: #393e46;
     vertical-align: middle;
@@ -75,7 +79,7 @@ h1{
     text-align: center;
 }
 
-#social .icon{
+.social .icon{
     margin-right: 15px;
     width: 37px;
 }
@@ -339,12 +343,12 @@ footer p{
         padding-top: 70px;
     }
 
-    #social {
+    .social {
         flex-direction: column;
         align-items: center;
     }
 
-    #social li{
+    .social li{
         margin-bottom: 25px;
     }
 
