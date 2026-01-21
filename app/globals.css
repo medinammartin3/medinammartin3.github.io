@@ -1,9 +1,47 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
 
+@theme {
+  /* Define the variables that will swap values based on mode */
+  --color-bg-main: var(--bg-main);
+  --color-bg-card: var(--bg-card);
+  --color-text-main: var(--text-main);
+  --color-text-muted: var(--text-muted);
+  --color-border-main: var(--border-main);
+  --color-primary: var(--primary);
+  
+  /* Utilities */
+  --radius: 0.5rem;
+}
+
+/* 1. LIGHT MODE (Default) - "Alex" Style */
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+  --bg-main: #ffffff;           /* Pure White Background */
+  --bg-card: #ffffff;           /* White Cards */
+  --text-main: #1e293b;         /* Dark Slate Text (Not Black) */
+  --text-muted: #64748b;        /* Grey Muted Text */
+  --border-main: #e2e8f0;       /* Light Grey Border */
+  --primary: #2563eb;           /* Blue 600 */
+}
+
+/* 2. DARK MODE - Overrides */
+:root.dark {
+  --bg-main: #020617;           /* Slate 950 Background */
+  --bg-card: #0f172a;           /* Slate 900 Cards */
+  --text-main: #f8fafc;         /* Slate 50 Text */
+  --text-muted: #94a3b8;        /* Slate 400 Muted */
+  --border-main: #1e293b;       /* Slate 800 Border */
+  --primary: #60a5fa;           /* Blue 400 */
+}
+
+/* 3. Global Reset */
+body {
+  background-color: var(--bg-main);
+  color: var(--text-main);
+  font-family: ui-sans-serif, system-ui, sans-serif;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Force headings to use the main text color */
+h1, h2, h3, h4, h5, h6 {
+  color: var(--text-main);
 }
