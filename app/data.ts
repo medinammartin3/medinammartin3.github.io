@@ -13,6 +13,45 @@ export const siteConfig = {
 export const getProjects = (lang: "en" | "fr" | "es") => [
   {
     id: 1,
+    title: "NHL Goal Prediction System",
+    category: "Machine Learning & Data Science",
+    description: {
+      en: "Developed an expected goals (xG) prediction pipeline using XGBoost/LightGBM and deployed a full-stack inference system on GCP.",
+      fr: "Pipeline de prédiction de buts (xG) utilisant XGBoost/LightGBM et système d'inférence déployé sur GCP.",
+      es: "Pipeline de predicción de goles (xG) usando XGBoost/LightGBM y sistema de inferencia desplegado en GCP.",
+    }[lang],
+    tech: ["Python", "Scikit-learn", "Docker", "GCP"],
+    link: "https://github.com/medinammartin3/NHL-Goal-Prediction",
+    color: "bg-blue-600",
+  },
+  {
+    id: 2,
+    title: "Safe Autonomous Driving MPC",
+    category: "Robotics & Control",
+    description: {
+      en: "Built a two-stage Model Predictive Control (MPC) architecture for safe autonomous driving in dynamic urban environments.",
+      fr: "Architecture MPC à deux étages pour la conduite autonome sécuritaire en milieu urbain.",
+      es: "Arquitectura MPC de dos etapas para conducción autónoma segura en entornos urbanos.",
+    }[lang],
+    tech: ["Python", "NumPy", "SciPy"],
+    link: "https://github.com/medinammartin3/Safe-Autonomous-Driving-MPC",
+    color: "bg-emerald-600",
+  },
+  {
+    id: 3,
+    title: "RL for Industrial Control",
+    category: "Deep Learning & Reinforcement Learning",
+    description: {
+      en: "Implemented advanced continuous-action RL algorithms (PPO, TD3) for industrial control tasks (flash clay calciner).",
+      fr: "Algorithmes RL avancés (PPO, TD3) pour des tâches de contrôle industriel.",
+      es: "Algoritmos avanzados de RL (PPO, TD3) para tareas de control industrial.",
+    }[lang],
+    tech: ["PyTorch", "Gymnasium"],
+    link: "https://github.com/DarkZant/rl-continuous",
+    color: "bg-orange-500",
+  },
+  {
+    id: 4,
     title: "Sondi - Full Stack Polling App",
     category: "Web Development",
     description: {
@@ -26,45 +65,6 @@ export const getProjects = (lang: "en" | "fr" | "es") => [
     color: "bg-red-500",
   },
   {
-    id: 2,
-    title: "NHL Goal Prediction System",
-    category: "Machine Learning & Data Science",
-    description: {
-      en: "Developed an expected goals (xG) prediction pipeline using XGBoost/LightGBM and deployed a full-stack inference system on GCP.",
-      fr: "Pipeline de prédiction de buts (xG) utilisant XGBoost/LightGBM et système d'inférence déployé sur GCP.",
-      es: "Pipeline de predicción de goles (xG) usando XGBoost/LightGBM y sistema de inferencia desplegado en GCP.",
-    }[lang],
-    tech: ["Python", "Scikit-learn", "Docker", "GCP"],
-    link: "https://github.com/medinammartin3",
-    color: "bg-blue-600",
-  },
-  {
-    id: 3,
-    title: "Autonomous Driving MPC",
-    category: "Robotics & Control",
-    description: {
-      en: "Built a two-stage Model Predictive Control (MPC) architecture for safe autonomous driving in dynamic urban environments.",
-      fr: "Architecture MPC à deux étages pour la conduite autonome sécuritaire en milieu urbain.",
-      es: "Arquitectura MPC de dos etapas para conducción autónoma segura en entornos urbanos.",
-    }[lang],
-    tech: ["Python", "NumPy", "SciPy"],
-    link: "https://github.com/medinammartin3",
-    color: "bg-emerald-600",
-  },
-  {
-    id: 4,
-    title: "RL for Industrial Control",
-    category: "Deep Learning & Reinforcement Learning",
-    description: {
-      en: "Implemented advanced continuous-action RL algorithms (PPO, TD3) for industrial control tasks (flash clay calciner).",
-      fr: "Algorithmes RL avancés (PPO, TD3) pour des tâches de contrôle industriel.",
-      es: "Algoritmos avanzados de RL (PPO, TD3) para tareas de control industrial.",
-    }[lang],
-    tech: ["PyTorch", "Gymnasium"],
-    link: "https://github.com/medinammartin3",
-    color: "bg-orange-500",
-  },
-  {
     id: 5,
     title: "PageRank Optimization",
     category: "Research",
@@ -74,7 +74,7 @@ export const getProjects = (lang: "en" | "fr" | "es") => [
       es: "Optimización de PageRank para grandes grafos, reduciendo la complejidad de O(n²) a O(n).",
     }[lang],
     tech: ["Python", "NumPy"],
-    link: "https://github.com/medinammartin3",
+    link: "https://github.com/medinammartin3/PageRank",
     color: "bg-indigo-500",
   }
 ];

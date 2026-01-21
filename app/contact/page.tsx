@@ -21,9 +21,7 @@ export default function ContactPage() {
 
     const formData = new FormData(event.currentTarget);
     
-    // -----------------------------------------------------------------
-    // REPLACE 'YOUR_ID' BELOW WITH YOUR ACTUAL FORMSPREE ID
-    // -----------------------------------------------------------------
+    
     const FORMSPREE_ENDPOINT = "https://formspree.io/f/mkooqezb"; 
 
     try {
