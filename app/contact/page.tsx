@@ -3,6 +3,7 @@ import { Mail, Linkedin, Github, Loader2, CheckCircle, AlertCircle } from "lucid
 import Link from "next/link";
 import { useLanguage } from "@/lib/language";
 import { useState } from "react";
+import { siteConfig } from "../data";
 
 export default function ContactPage() {
   const { t } = useLanguage();
@@ -65,7 +66,7 @@ export default function ContactPage() {
           </p>
 
           <div className="space-y-6">
-            <Link href="https://linkedin.com" target="_blank" className="flex items-center gap-4 text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition">
+            <Link href={siteConfig.socials.find(s => s.name === "LinkedIn")?.href || "#"} target="_blank" className="flex items-center gap-4 text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition">
               <Linkedin className="w-6 h-6" />
               <span className="text-lg">LinkedIn</span>
             </Link>
