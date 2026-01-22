@@ -1,5 +1,6 @@
 "use client";
 import { useEffect, useRef } from "react";
+import { useTheme } from "next-themes";
 
 interface LetterGlitchProps {
   glitchColors?: string[];
@@ -18,6 +19,12 @@ export default function LetterGlitch({
 }: LetterGlitchProps) {
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const animationRef = useRef<number | null>(null);
+  const { resolvedTheme } = useTheme();
+
+  const themeRef = useRef(resolvedTheme);
+  useEffect(() => {
+    themeRef.current = resolvedTheme;
+  }, [resolvedTheme]);
 
   useEffect(() => {
     const canvas = canvasRef.current;
@@ -41,7 +48,6 @@ export default function LetterGlitch({
         mouse.y = e.clientY - rect.top;
     };
     
-    // Track mouse over the parent container or window
     window.addEventListener("mousemove", handleMouseMove);
 
     // Initial Resize
@@ -93,23 +99,30 @@ export default function LetterGlitch({
       ctx.font = `${fontSize}px monospace`;
       ctx.textBaseline = "top";
 
+      const isDark = themeRef.current === 'dark';
+      
+      // COLORS BASED ON THEME
+      // Dark Mode: White Hover, Black Vignette
+      // Light Mode: Black Hover, White Vignette
+      const hoverColor = "#ffffff";
+      const vignetteColor1 = isDark ? "rgba(0,0,0,0)" : "rgba(255,255,255,0)";
+      const vignetteColor2 = isDark ? "rgba(0,0,0,0.9)" : "rgba(255,255,255,0.9)";
+      const scanlineColor  = isDark ? "rgba(255, 255, 255, 0.03)" : "rgba(0, 0, 0, 0.03)";
+
       for (let i = 0; i < grid.length; i++) {
         const cell = grid[i];
         
-        // INTERACTIVITY: Calculate distance to mouse
         const dx = mouse.x - cell.x;
         const dy = mouse.y - cell.y;
         const dist = Math.sqrt(dx * dx + dy * dy);
-        const hoverRadius = 50;
+        const hoverRadius = 50; 
 
-        // If mouse is close, increase glitch chance drastically
         if (dist < hoverRadius) {
-            if (frame % 2 === 0) { // Fast glitch
+            if (frame % 2 === 0) { 
                 cell.char = chars[Math.floor(Math.random() * chars.length)];
-                cell.color = "#ffffff"; // Turn white/bright when hovered
+                cell.color = hoverColor;
             }
         } else if (frame >= cell.changeAt) {
-            // Normal random glitch logic
             if (Math.random() < 0.05) { 
                 cell.char = chars[Math.floor(Math.random() * chars.length)];
                 cell.changeAt = frame + Math.floor(Math.random() * glitchSpeed);
@@ -126,18 +139,20 @@ export default function LetterGlitch({
         ctx.fillText(cell.char, cell.x, cell.y);
       }
 
+      // VIGNETTE (Theme Aware)
       if (outerVignette) {
         const gradient = ctx.createRadialGradient(
             width / 2, height / 2, 0, width / 2, height / 2, width * 0.8
         );
-        gradient.addColorStop(0, "rgba(0,0,0,0)");
-        gradient.addColorStop(1, "rgba(0,0,0,0.9)");
+        gradient.addColorStop(0, vignetteColor1);
+        gradient.addColorStop(1, vignetteColor2);
         ctx.fillStyle = gradient;
         ctx.fillRect(0, 0, width, height);
       }
 
+      // SCANLINES (Theme Aware)
       if (smooth) {
-          ctx.fillStyle = "rgba(255, 255, 255, 0.03)";
+          ctx.fillStyle = scanlineColor;
           ctx.fillRect(0, (frame * 2) % height, width, 2);
       }
 
