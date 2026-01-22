@@ -5,8 +5,7 @@ export const siteConfig = {
   fullName: "Martin Medina",
   socials: [
     { name: "LinkedIn", href: "https://linkedin.com", icon: Linkedin },
-    { name: "GitHub", href: "https://github.com/medinammartin3", icon: Github },
-    { name: "Email", href: "mailto:medinammartin3@gmail.com", icon: Mail },
+    { name: "GitHub", href: "https://github.com/medinammartin3", icon: Github }
   ],
 };
 
