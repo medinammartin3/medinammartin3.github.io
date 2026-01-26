@@ -20,6 +20,7 @@ export default function ProjectsPage() {
     { key: "Deep Learning & Reinforcement Learning", label: t("filter_rl") },
     { key: "Robotics & Control", label: t("filter_robotics") },
     { key: "Web Development", label: t("filter_web") },
+    { key: "Software Development", label: t("filter_software") },
     { key: "Research", label: t("filter_research") }
   ];
 
