@@ -11,7 +11,7 @@ export default function Navbar() {
   const { language, setLanguage, t } = useLanguage();
   const [mounted, setMounted] = useState(false);
   const [isLangOpen, setIsLangOpen] = useState(false);
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false); // New state
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const dropdownRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => setMounted(true), []);
@@ -37,9 +37,7 @@ export default function Navbar() {
           <span>Martin<span className="text-[var(--primary)]">.</span></span>
         </Link>
         
-        {/* Container for Links and Actions - Preserves original layout */}
         <div className="flex items-center gap-8">
-          {/* Desktop Links (Hidden on mobile) */}
           <div className="hidden md:flex items-center gap-8 text-sm font-medium text-[var(--text-muted)]">
             <Link href="/" className="hover:text-[var(--primary)] transition">{t("nav_home")}</Link>
             <Link href="/projects" className="hover:text-[var(--primary)] transition">{t("nav_projects")}</Link>
@@ -66,7 +64,11 @@ export default function Navbar() {
                         setLanguage(lang.code as "en" | "fr" | "es");
                         setIsLangOpen(false);
                       }}
-                      className="w-full text-left px-4 py-2 text-sm hover:bg-[#f3f4f6] dark:hover:bg-slate-800 flex items-center justify-between group transition-colors"
+                      className={`w-full text-left px-4 py-2 text-sm flex items-center justify-between group transition-colors ${
+                        mounted && theme === 'dark' 
+                          ? 'hover:bg-slate-800' 
+                          : 'hover:bg-[#f3f4f6]'
+                      }`}
                     >
                       {lang.label}
                       {language === lang.code && <Check size={14} className="text-[var(--primary)]" />}
