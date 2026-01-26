@@ -17,15 +17,15 @@ const translations = {
     nav_contact: "Contact",
     
     // Home
-    home_title: "Hi, I’m Martin",
-    home_desc: "Machine Learning graduate student at MILA (Quebec AI Institute) looking for a 6-8 month credited internship during Summer 2026. Passionate about RL, Data Science, and Software Engineering.",
+    home_title: "Hi, I'm Martin",
+    home_desc: "Machine Learning graduate student at Mila (Quebec AI Institute) looking for a 6-8 month credited internship during Summer 2026.\nPassionate about Machine Learning, Data Science and Deep Learning.",
     hero_btn_linkedin: "LinkedIn",
     hero_btn_github: "GitHub",
     footer_rights: "All rights reserved.",
 
     // Projects Page
     projects_title: "Projects & Research",
-    projects_subtitle: "My latest work in AI, Engineering, and Software Development.",
+    projects_subtitle: "My latest work in AI, Web Development, and Software Development.",
     skills_title: "Technical Skills",
     
     // Filters
@@ -33,6 +33,7 @@ const translations = {
     filter_ml: "ML / Data Science",
     filter_rl: "Reinforcement Learning",
     filter_robotics: "Robotics & Control",
+    filter_software: "Software Development",
     filter_web: "Web Development",
     filter_research: "Research",
     filter_languages: "Languages",
@@ -41,7 +42,7 @@ const translations = {
 
     // Contact Page
     contact_title: "Get in Touch",
-    contact_desc: "I’m actively seeking a 6-8 month internship for Summer 2026. If you have a question or project proposal, I’d love to hear from you.",
+    contact_desc: "I'm actively seeking a 6-8 month internship for Summer 2026. If you have a question or project proposal, I’d love to hear from you.",
     contact_name: "Name",
     contact_email: "Email",
     contact_subject: "Subject",
@@ -54,18 +55,19 @@ const translations = {
     nav_contact: "Contact",
 
     home_title: "Bonjour, je suis Martin",
-    home_desc: "Étudiant à la maîtrise au MILA (Institut d'IA du Québec) à la recherche d'un stage crédité de 6 à 8 mois pour l'été 2026. Passionné par le RL, la science des données et le génie logiciel.",
+    home_desc: "Étudiant à la maîtrise professionnelle au MILA (Institut québécois d'IA) à la recherche d'un stage crédité de 6 à 8 mois pour l'été 2026.\nPassionné par le l'apprentissage automatique, la science des données et l'apprentissage profond.",
     hero_btn_linkedin: "LinkedIn",
     hero_btn_github: "GitHub",
     footer_rights: "Tous droits réservés.",
 
     projects_title: "Projets et Recherche",
-    projects_subtitle: "Mes derniers travaux en IA, Ingénierie et Développement Logiciel.",
+    projects_subtitle: "Mes derniers travaux en IA, Développement Web et Génie Logiciel.",
     skills_title: "Compétences Techniques",
 
     filter_all: "Tout",
     filter_ml: "ML / Science des Données",
     filter_rl: "Apprentissage par Renforcement",
+    filter_software: "Génie logiciel",
     filter_robotics: "Robotique et Contrôle",
     filter_web: "Développement Web",
     filter_research: "Recherche",
@@ -87,18 +89,19 @@ const translations = {
     nav_contact: "Contacto",
 
     home_title: "Hola, soy Martin",
-    home_desc: "Estudiante de maestría en MILA (Instituto de IA de Quebec) buscando una pasantía acreditada de 6-8 meses para el verano de 2026. Apasionado por RL, Ciencia de Datos e Ingeniería de Software.",
+    home_desc: "Estudiante de maestría en MILA (Instituto de IA de Quebec) buscando una pasantía acreditada de 6-8 meses para el verano de 2026.\nApasionado por Machine Learning, Ciencia de Datos y Deep Learning.",
     hero_btn_linkedin: "LinkedIn",
     hero_btn_github: "GitHub",
     footer_rights: "Todos los derechos reservados.",
 
     projects_title: "Proyectos e Investigación",
-    projects_subtitle: "Mis últimos trabajos en IA, Ingeniería y Desarrollo de Software.",
+    projects_subtitle: "Mis últimos trabajos en IA, Desarrollo Web y Desarrollo de Software.",
     skills_title: "Habilidades Técnicas",
 
     filter_all: "Todos",
     filter_ml: "ML / Ciencia de Datos",
     filter_rl: "Aprendizaje por Refuerzo",
+    filter_software: "Desarrollo de Software",
     filter_robotics: "Robótica y Control",
     filter_web: "Desarrollo Web",
     filter_research: "Investigación",

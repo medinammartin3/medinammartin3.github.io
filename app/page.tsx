@@ -31,7 +31,7 @@ export default function Home() {
         </h1>
         
         {/* Description */}
-        <p className="text-lg md:text-xl text-[var(--text-main)] leading-relaxed max-w-2xl mx-auto mb-10 font-light drop-shadow-sm bg-white/50 dark:bg-black/5 backdrop-blur-sm p-4 rounded-xl transition-colors">
+        <p className="whitespace-pre-line text-lg md:text-xl text-[var(--text-main)] leading-relaxed max-w-3xl mx-auto mb-10 font-light drop-shadow-sm bg-white/50 dark:bg-black/5 backdrop-blur-sm p-4 rounded-xl transition-colors">
           {t("home_desc")}
         </p>
 
