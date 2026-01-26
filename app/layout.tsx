@@ -8,7 +8,7 @@ import { LanguageProvider } from "@/lib/language"; // Import the provider
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Martin Medina | ML Graduate Student",
+  title: "Martin Medina | Webstite & Portfolio",
   description: "Portfolio of Martin Medina.",
 };
 
