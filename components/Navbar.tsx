@@ -2,7 +2,7 @@
 import Link from "next/link";
 import Image from "next/image"; 
 import { useTheme } from "next-themes";
-import { Moon, Sun, Globe, ChevronDown, Check } from "lucide-react";
+import { Moon, Sun, Globe, ChevronDown, Check, Menu, X } from "lucide-react";
 import { useEffect, useState, useRef } from "react";
 import { useLanguage } from "@/lib/language";
 
@@ -11,6 +11,7 @@ export default function Navbar() {
   const { language, setLanguage, t } = useLanguage();
   const [mounted, setMounted] = useState(false);
   const [isLangOpen, setIsLangOpen] = useState(false);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false); // New state
   const dropdownRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => setMounted(true), []);
@@ -25,7 +26,7 @@ export default function Navbar() {
     <nav className="fixed top-0 w-full z-50 bg-[var(--bg-main)]/90 backdrop-blur-md border-b border-[var(--border-main)] transition-colors duration-300">
       <div className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
         
-        <Link href="/" className="flex items-center gap-3 text-2xl font-bold tracking-tight hover:opacity-80 transition">
+        <Link href="/" className="flex items-center gap-3 text-2xl font-bold tracking-tight hover:opacity-80 transition" onClick={() => setIsMobileMenuOpen(false)}>
           <Image 
             src="/hedgehog.svg" 
             alt="Hedgehog Logo" 
@@ -36,7 +37,9 @@ export default function Navbar() {
           <span>Martin<span className="text-[var(--primary)]">.</span></span>
         </Link>
         
+        {/* Container for Links and Actions - Preserves original layout */}
         <div className="flex items-center gap-8">
+          {/* Desktop Links (Hidden on mobile) */}
           <div className="hidden md:flex items-center gap-8 text-sm font-medium text-[var(--text-muted)]">
             <Link href="/" className="hover:text-[var(--primary)] transition">{t("nav_home")}</Link>
             <Link href="/projects" className="hover:text-[var(--primary)] transition">{t("nav_projects")}</Link>
@@ -63,7 +66,6 @@ export default function Navbar() {
                         setLanguage(lang.code as "en" | "fr" | "es");
                         setIsLangOpen(false);
                       }}
-                      // FIXED HOVER: Explicit hex color for light mode safety
                       className="w-full text-left px-4 py-2 text-sm hover:bg-[#f3f4f6] dark:hover:bg-slate-800 flex items-center justify-between group transition-colors"
                     >
                       {lang.label}
@@ -80,9 +82,46 @@ export default function Navbar() {
             >
               {mounted && theme === "dark" ? <Sun size={20} /> : <Moon size={20} />}
             </button>
+
+            {/* Hamburger Menu Button (Only visible on mobile) */}
+            <button 
+                onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+                className="md:hidden p-2 text-[var(--text-muted)] hover:text-[var(--primary)] transition"
+            >
+                {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
+            </button>
           </div>
         </div>
       </div>
+
+      {/* Mobile Menu Dropdown */}
+      {isMobileMenuOpen && (
+        <div className="md:hidden border-t border-[var(--border-main)] bg-[var(--bg-main)]">
+            <div className="flex flex-col p-4 space-y-4 text-sm font-medium text-[var(--text-muted)]">
+                <Link 
+                    href="/" 
+                    onClick={() => setIsMobileMenuOpen(false)}
+                    className="block py-2 hover:text-[var(--primary)] transition"
+                >
+                    {t("nav_home")}
+                </Link>
+                <Link 
+                    href="/projects" 
+                    onClick={() => setIsMobileMenuOpen(false)}
+                    className="block py-2 hover:text-[var(--primary)] transition"
+                >
+                    {t("nav_projects")}
+                </Link>
+                <Link 
+                    href="/contact" 
+                    onClick={() => setIsMobileMenuOpen(false)}
+                    className="block py-2 hover:text-[var(--primary)] transition"
+                >
+                    {t("nav_contact")}
+                </Link>
+            </div>
+        </div>
+      )}
     </nav>
   );
 }
